@@ -1,19 +1,73 @@
+body{
+    background: rgb(44, 37, 37);
+    color: white;
+}
 #calcultor {
-    border: 1px solid rgb(180, 113, 113);
-    width: 20%;
-    margin-top: 15%;
+    border: 3px solid rgb(236, 218, 216);
+    width: 30%;
+    margin-top: 11%;
+    background: rgb(206, 200, 205);
+    box-shadow: rgb(59, 58, 58) 3px 3px 5px;
+}
+#eqution {
+    width: 100%;
+    height: 25px;
+    font-size: 18px;
+    background: rgb(83, 66, 66);
+    border-bottom: 2px solid rgb(133, 127, 126);
 }
 #display {
     width: 100%;
-    height: 40px;
-    border: 1px solid rgb(201, 86, 86);
-    font-size: 25px;
+    height: 50px;
+    font-size: 30px;
+    margin-bottom: 5px; 
+    background: rgb(43, 42, 42);
 }
 .btn {
-    width: 33%;
-    height: 30%;
+    width: 100%;
+    height: 60px;
+    border-radius: 10%;
+    margin-bottom: 5px;
+    background: rgb(43, 42, 42);
+    color: white;
+    box-shadow: rgb(56, 54, 54) 3px 3px 5px;
+    font-size: 25px;
 }
-.key {
-    flex-wrap: wrap;
-    display: flex;
+#equals{
+    background: rgb(83, 66, 66);
+}
+.col-lg-4, .col-md-4, .col-sm-4{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+@media (min-width:320px) and (max-width: 425px){
+    #calcultor{
+        width: 90%;
+    }
+    #display {
+        height: 40px;
+        font-size: 25px;
+        margin-bottom: 2px; 
+    }
+    .btn {
+        height: 50px;
+        border-radius: 15%;
+        margin-bottom: 3px;
+        font-size: 20px;
+    }
+}
+@media (min-width:426px) and (max-width: 770px){
+    #calcultor{
+        width: 40%;
+    }
+    #display {
+        height: 40px;
+        font-size: 25px;
+        margin-bottom: 2px; 
+    }
+    .btn {
+        height: 50px;
+        margin-bottom: 3px;
+        font-size: 20px;
+    }
 }

@@ -23,7 +23,8 @@ class App extends React.Component {
     }
     handelAc (){
         this.setState({
-            display:''
+            display:'',
+            result: ''
         })
     }
     handelRemove(){
@@ -35,30 +36,78 @@ class App extends React.Component {
         return(
             <div className='container' id='calcultor'>
                 <div className='row'>
-                    <div id='display'>{this.state.display}
+                    <div id='eqution'>{this.state.display}
                     </div>
                     <div id='display'>{this.state.result}
                     </div>
                 </div>
                 <div className='key'>
-                    <button id="clear"    value='AC' className='btn btn-default' onClick={this.handelAc}>AC</button>
-                    <button id="divide"   value='/' className='btn btn-default' onClick={this.handelValue}>/</button>
-                    <button id="multiply" value='*' className='btn btn-default' onClick={this.handelValue}>x</button>
-                    <button id="seven"    value='7' className='btn btn-default' onClick={this.handelValue}>7</button>
-                    <button id="eight"    value='8' className='btn btn-default' onClick={this.handelValue}>8</button>
-                    <button id="nine"     value='9' className='btn btn-default' onClick={this.handelValue}>9</button>
-                    <button id="subtract" value='-' className='btn btn-default' onClick={this.handelValue}>-</button>
-                    <button id="four"     value='4' className='btn btn-default' onClick={this.handelValue}>4</button>
-                    <button id="five"     value='5' className='btn btn-default' onClick={this.handelValue}>5</button>
-                    <button id="six"      value='6' className='btn btn-default' onClick={this.handelValue}>6</button>
-                    <button id="add"      value='+' className='btn btn-default' onClick={this.handelValue}>+</button>
-                    <button id="one"      value='1' className='btn btn-default' onClick={this.handelValue}>1</button>
-                    <button id="two"      value='2' className='btn btn-default' onClick={this.handelValue}>2</button>
-                    <button id="three"    value='3' className='btn btn-default' onClick={this.handelValue}>3</button>
-                    <button id="zero"     value='0' className='btn btn-default' onClick={this.handelValue}>0</button>
-                    <button id="decimal"  value='.' className='btn btn-default' onClick={this.handelValue}>.</button>
-                    <button id="equals"   value='=' className='btn btn-default' onClick={this.handelValue}>=</button>
-                    <button id="remove"   value='<-' className='btn btn-default' onClick={this.handelRemove}>re</button>
+                    <div className='row'>
+                        <div className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                            <button id="eight" value='8' className='btn btn-default' onClick={this.handelValue}>8</button>
+                        </div>
+                        <div className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                            <button id="nine" value='9' className='btn btn-default' onClick={this.handelValue}>9</button>
+                        </div>
+                        <div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                            <button id="clear" value='AC' className='btn btn-default' onClick={this.handelAc}>AC</button>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                            <button id="seven"  value='6' className='btn btn-default' onClick={this.handelValue}>6</button>
+                        </div>
+                        <div  className=' col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                            <button id="six" value='7' className='btn btn-default' onClick={this.handelValue}>7</button>
+                        </div>
+                        <div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                            <button id="divide" value='/' className='btn btn-default' onClick={this.handelValue}>/</button>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                            <button id="four"     value='4' className='btn btn-default' onClick={this.handelValue}>4</button>
+                        </div>
+                        <div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                            <button id="five"     value='5' className='btn btn-default' onClick={this.handelValue}>5</button>
+                        </div>
+                        <div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                            <button id="add"      value='+' className='btn btn-default' onClick={this.handelValue}>+</button>
+                        </div>
+                    </div>
+                    <div className='row'>
+                    	<div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                    		<button id="two"      value='2' className='btn btn-default' onClick={this.handelValue}>2</button>
+                    	</div>
+                    	<div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                    		<button id="three"    value='3' className='btn btn-default' onClick={this.handelValue}>3</button>
+                    	</div>
+                    	<div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                    		<button id="multiply" value='*' className='btn btn-default' onClick={this.handelValue}>x</button>
+                    	</div>
+                    </div>
+                    <div className='row'>
+                    	<div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                    		<button id="zero"     value='0' className='btn btn-default' onClick={this.handelValue}>0</button>
+                    	</div>
+                    	<div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                    		<button id="one"      value='1' className='btn btn-default' onClick={this.handelValue}>1</button>
+                    	</div>
+                    	<div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                    		<button id="subtract" value='-' className='btn btn-default' onClick={this.handelValue}>-</button>
+                    	</div>
+                    </div>
+                    <div className='row'>
+                    	<div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                    		<button id="decimal"  value='.' className='btn btn-default' onClick={this.handelValue}>.</button>
+                    	</div>
+                    	<div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                    		<button id="equals"   value='=' className='btn btn-default' onClick={this.handelValue}>=</button>
+                    	</div>
+                    	<div  className='col-lg-4 col-md-4 col-sm-4 col-xs-4'>
+                    		<button id="remove"   value='<-' className='btn btn-default' onClick={this.handelRemove}>re</button>
+                    	</div>
+                    </div>
                 </div>
             </div>
         );
